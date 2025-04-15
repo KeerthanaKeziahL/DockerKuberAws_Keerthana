@@ -1,0 +1,22 @@
+Kubernetes is a powerful, open-source platform used to manage containerized applications, providing automation for deployment, scaling, and management across various environments. It essentially orchestrates containers, making it easier to deploy and manage applications at scale. 
+Key Concepts:
+Containers: Self-contained environments that package applications and their dependencies, making them portable and scalable. 
+Pods: The smallest deployable units in Kubernetes, consisting of one or more containers that share resources and network. 
+Nodes: Physical or virtual machines where pods run. 
+Clusters: Groups of nodes managed by Kubernetes. 
+Namespaces: A mechanism to divide a cluster into logical groups for resource allocation and management. 
+
+To deploy your Docker image on Kubernetes, it needs to be accessible to Kubernetes nodes. You can push it to a container registry like Docker Hub.
+Now you need to login to Docker Hub.
+
+docker login
+
+Finally, push the image to Docker Hub using the below command:
+
+docker push <xxx>
+
+You can check your dockerhub repository to check if the docker image was created successfully.
+Configure Kubernetes YAML files
+Follow the steps below to deploy a Docker container on Kubernetes using a YAML file.
+
+Create a YAML file for the deployment. Use a text editor to create a YAML file that defines the deployment configuration. Specify the desired number of replicas, the image name, and any necessary environment variables or labels.
