@@ -1,0 +1,40 @@
+What Is Docker?
+Docker is a container platform. To explain Docker, we first need to discuss containers. Containers bundle application code with operating system (OS) libraries into a runnable package. This means the application can run on any system that supports the container format, even if it runs on an entirely different operating system.
+
+Let’s consider an example. A PostgreSQL container could contain the Linux version of the database server combined with the runtime libraries for Debian Linux. This container runs on any computer—referred to as the “host”—that supports the container, including macOS, Windows, or a different Linux distribution, such as CentOS.
+
+Why Containers?
+For developers, containers simplify app delivery. Instead of supporting multiple operating systems and versions, you provide a container that works almost anywhere.
+
+For infrastructure operators, containers simplify running applications. You don’t have to manage multiple operating systems or versions, either. Your systems only need to support the container runtime. You can commingle applications that require different operating systems on the same host.
+
+Containers allow you to run various applications on the same host, even if they require different operating systems or conflicting library versions. As a result, you can use your infrastructure more efficiently.
+
+Docker: A Container Platform
+Docker is an open-source containerization system. Although you can package your applications into containers without it, Docker makes creating, distributing, and running containerized applications simple. It supports Linux, macOS, and Windows, as well as the major cloud platforms.
+
+Docker has tools for creating, distributing, starting, and stopping containers. The containers can share network resources with the host or run with their virtual network visible only to other containers, or both. Docker also has robust tools for managing how containers communicate and scale together.
+
+Containers Are Not Virtual Machines
+While containers are a way for applications to share system resources, they’re not virtual machines (VMs). A VM is a computer within a computer. It runs a discrete copy of an operating system, and an application running in a VM “sees” virtualized disks, network adaptors, and video cards. While it may still be sharing a host with other virtual machines, it’s more isolated than an application in a container.
+
+Containers run a single application. If you need to run more than one app, you need to run more than one container, or you need a virtual machine. The containers share a single host operating system. Docker’s host operating system uses a Linux kernel (even when it’s running on other platforms) to share system resources between containers.
+
+Why Use Docker?
+We’ve already covered how containers make it easier to package, distribute, and run applications. But those are not the only advantages containers provide.
+
+By isolating applications and their dependencies inside a container, you also separate them from each other. Docker containers can only access the resources you specify when you run them. They are isolated from their host systems’ file system and network by default.
+
+This isolation gives you an extra level of protection from application and OS library vulnerabilities. If an attacker compromises a container, they’ve only gained access to the resources the container can see.
+
+Docker containers use fewer resources than a VM. So, in theory, you can run more containerized applications on a host system than you can on virtual machines.
+
+Containers also start much faster than virtual machines. A virtual machine must create the virtualized system, boot the operating system, and run your application. Containers only run their contained application. This makes containers useful for applications that use microservices you need to start and stop quickly to adjust to system demand.
+
+Why Not Use Docker?
+Containers are isolated, but they’re not as isolated as VMs. Depending on the isolation level you need, containers might not be adequate. Containers offer an extra layer of security, while virtual machines are completely isolated from each other.
+
+Docker Examples
+The ability to quickly stop and start containers makes them well-suited for applications that need to scale up and down based on demand. Many microservice and serverless architectures use Docker.
+
+Docker is also useful for supporting applications with special needs, like older operating systems or libraries that conflict with other applications. Instead of keeping a new host for one application, you run it in a container.
